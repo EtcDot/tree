@@ -1,8 +1,12 @@
 #!/bin/bash
 
-git add -A . 
-echo ">>>>> ADD DONE"
-git commit -m \"$*\" 
-echo ">>>>> COMMIT DONE"
-git push
-echo ">>>>> PUSH DONE"
+msg=$1
+if [ -n "$msg" ]; then
+   git add -A
+   git commit -m"${msg}"
+   git push
+   git status
+   echo ">>>>> OK <<<<<"
+else
+   echo "Please commit a message!"
+fi
