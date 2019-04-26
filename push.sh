@@ -1,4 +1,8 @@
 #!/bin/bash
 
-git add -A . && git commit -m ""$0 && git push
-echo "it's ok!"
+git add -A . 
+echo ">>>>> ADD DONE"
+git commit -m ""$0 
+echo ">>>>> COMMIT DONE"
+git push
+echo ">>>>> PUSH DONE"
